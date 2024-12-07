@@ -31,9 +31,20 @@ class Student
     Student(Student *s)
     {
         cout<<"Shallow copy is called -->> "<<endl;
-        strcpy(this->name, s->name);
-        strcpy(this->dept, s->dept);
-        strcpy(this->skillSets, s->skillSets);
+
+        /**
+         * 
+         * what is wrong here and what you should avoid
+         * 
+         */
+        // strcpy(this->name, s->name);
+        // strcpy(this->dept, s->dept);
+        // strcpy(this->skillSets, s->skillSets);
+        // this->rateing = s->rateing;
+
+        this->dept = s->dept;
+        this->name = s->name;
+        this->skillSets = s->skillSets;
         this->rateing = s->rateing;
 
     }
